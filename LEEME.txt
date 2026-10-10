@@ -1,0 +1,30 @@
+INVITACIÓN DE CUMPLEAÑOS — Mendoza Invitaciones
+==================================================
+
+CÓMO SUBIRLA
+Sube la carpeta completa (index.html, css/, js/, img/, musica/) a Vercel,
+Netlify o tu hosting. No necesita instalar nada.
+
+ANTES DE PUBLICAR, REVISA js/app.js (bloque CONFIG al inicio):
+  - fechaEvento: puse 16:00 h del 24/10/2026 como hora provisional. Cámbiala por la real.
+  - mapa: pega el link exacto de Google Maps del salón.
+  - mensajeWhatsapp: el texto que llega al confirmar.
+
+MÚSICA (opcional)
+Coloca tu canción en:  musica/cancion.mp3
+Si no hay archivo, suena automáticamente una pista instrumental original.
+El botón redondo abajo a la derecha pausa / reanuda.
+
+IMÁGENES (opcionales — si no pones ninguna, aparece la arañita mascota)
+Puedes colocar tus imágenes en la carpeta img/ con estos nombres:
+  img/personaje-1.png  → portada (colgando de un hilo)
+  img/personaje-2.png  → debajo de la cuenta regresiva (colgando)
+  img/personaje-3.png  → arriba de la confirmación (flotando)
+  img/personaje-4.png  → cierre (flotando)
+Puede ser .png, .gif (animado), .webp o .jpg — solo respeta el nombre, la extensión se detecta sola.
+Ejemplo: img/personaje-2.gif
+Ideal con fondo transparente (PNG/GIF/WEBP). Si alguna no existe, aparece la arañita mascota.
+
+EXTRAS
+  - Tocar la pantalla durante la intro la adelanta hasta el botón.
+  - Tocar cualquier parte de la invitación lanza una telaraña.

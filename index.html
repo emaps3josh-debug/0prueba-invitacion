@@ -32,6 +32,59 @@
     <ellipse cx="50" cy="61" rx="13" ry="17" fill="currentColor"/>
     <path d="M46 54 L54 54 L50 60 Z M46 68 L54 68 L50 62 Z" fill="#e11d2e"/>
   </symbol>
+
+  <!-- Mascota original: arañita fiestera -->
+  <defs>
+    <radialGradient id="gCuerpo" cx="40%" cy="35%" r="70%">
+      <stop offset="0" stop-color="#3a4170"/><stop offset=".55" stop-color="#1a1d33"/><stop offset="1" stop-color="#0a0b14"/>
+    </radialGradient>
+    <linearGradient id="gGorro" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff4a58"/><stop offset="1" stop-color="#b10f1d"/>
+    </linearGradient>
+    <radialGradient id="gGloboR" cx="35%" cy="30%" r="70%"><stop offset="0" stop-color="#ff8a94"/><stop offset=".5" stop-color="#e11d2e"/><stop offset="1" stop-color="#8f0c17"/></radialGradient>
+    <radialGradient id="gGloboA" cx="35%" cy="30%" r="70%"><stop offset="0" stop-color="#9dbaff"/><stop offset=".5" stop-color="#1e5bff"/><stop offset="1" stop-color="#11307f"/></radialGradient>
+  </defs>
+  <symbol id="mascota" viewBox="0 0 200 220">
+    <!-- patas -->
+    <g fill="none" stroke="#1a1d33" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M52 108 Q24 92 20 64"/><path d="M46 124 Q14 118 8 96"/>
+      <path d="M46 142 Q16 152 12 176"/><path d="M56 158 Q34 178 36 204"/>
+      <path d="M148 108 Q176 92 180 64"/><path d="M154 124 Q186 118 192 96"/>
+      <path d="M154 142 Q184 152 188 176"/><path d="M144 158 Q166 178 164 204"/>
+    </g>
+    <g fill="#e11d2e">
+      <circle cx="20" cy="62" r="6"/><circle cx="8" cy="94" r="6"/><circle cx="12" cy="178" r="6"/><circle cx="36" cy="206" r="6"/>
+    </g>
+    <g fill="#1e5bff">
+      <circle cx="180" cy="62" r="6"/><circle cx="192" cy="94" r="6"/><circle cx="188" cy="178" r="6"/><circle cx="164" cy="206" r="6"/>
+    </g>
+    <!-- cuerpo -->
+    <circle cx="100" cy="128" r="58" fill="url(#gCuerpo)" stroke="#05060f" stroke-width="3"/>
+    <ellipse cx="80" cy="96" rx="16" ry="9" fill="#fff" opacity=".12" transform="rotate(-25 80 96)"/>
+    <!-- ojos -->
+    <circle cx="80" cy="118" r="17" fill="#fff"/><circle cx="120" cy="118" r="17" fill="#fff"/>
+    <circle cx="84" cy="121" r="9" fill="#0a0b14"/><circle cx="116" cy="121" r="9" fill="#0a0b14"/>
+    <circle cx="87" cy="117" r="3.4" fill="#fff"/><circle cx="119" cy="117" r="3.4" fill="#fff"/>
+    <!-- cachetes y sonrisa -->
+    <ellipse cx="66" cy="144" rx="9" ry="5" fill="#ff5a7a" opacity=".55"/>
+    <ellipse cx="134" cy="144" rx="9" ry="5" fill="#ff5a7a" opacity=".55"/>
+    <path d="M86 146 Q100 162 114 146" fill="#e11d2e" stroke="#05060f" stroke-width="3" stroke-linecap="round"/>
+    <!-- corazón en la pancita -->
+    <path d="M100 178 c-8-7-14-11-14-17 a6 6 0 0 1 14-3 a6 6 0 0 1 14 3 c0 6-6 10-14 17z" fill="#e11d2e" opacity=".9"/>
+    <!-- gorro de fiesta -->
+    <g transform="rotate(-12 100 70)">
+      <path d="M100 12 L76 74 Q100 82 124 74 Z" fill="url(#gGorro)" stroke="#05060f" stroke-width="2.5" stroke-linejoin="round"/>
+      <path d="M92 33 L108 33 M86 50 L114 50 M81 64 L119 64" stroke="#5b8cff" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="100" cy="12" r="8" fill="#fff" stroke="#05060f" stroke-width="2"/>
+    </g>
+  </symbol>
+  <symbol id="globos" viewBox="0 0 120 220">
+    <path d="M38 98 Q46 150 58 218 M84 82 Q70 150 60 218" fill="none" stroke="#dfe4ff" stroke-width="1.6"/>
+    <ellipse cx="38" cy="58" rx="30" ry="38" fill="url(#gGloboR)"/><path d="M33 95 l5 7 5-7z" fill="#8f0c17"/>
+    <ellipse cx="84" cy="44" rx="28" ry="36" fill="url(#gGloboA)"/><path d="M79 79 l5 7 5-7z" fill="#11307f"/>
+    <ellipse cx="28" cy="42" rx="7" ry="11" fill="#fff" opacity=".35" transform="rotate(-20 28 42)"/>
+    <ellipse cx="74" cy="28" rx="6" ry="10" fill="#fff" opacity=".35" transform="rotate(-20 74 28)"/>
+  </symbol>
 </svg>
 
 <canvas id="ciudad" aria-hidden="true"></canvas>
@@ -74,7 +127,7 @@
 
   <!-- 01 PORTADA -->
   <section class="sec portada" id="portada">
-    <div class="colgante revelar"><img src="img/personaje-1.png" alt="" onerror="this.parentNode.remove()"></div>
+    <div class="colgante revelar"><img src="img/personaje-1.png" alt=""></div>
     <p class="marca revelar">MENDOZA INVITACIONES</p>
     <p class="presenta revelar" style="--d:.15s">PRESENTA</p>
     <h2 class="feliz brilla revelar" style="--d:.3s">
@@ -102,7 +155,7 @@
         <div class="caja"><span class="num" id="cd-s">00</span><span class="lab">SEG</span></div>
       </div>
     </div>
-    <div class="colgante chico revelar" style="--d:.2s"><img src="img/personaje-2.png" alt="" onerror="this.parentNode.remove()"></div>
+    <div class="colgante chico revelar" style="--d:.2s"><img src="img/personaje-2.png" alt=""></div>
   </section>
 
   <!-- 03 UBICACIÓN -->
@@ -118,7 +171,7 @@
   <!-- 04 CONFIRMACIÓN -->
   <section class="sec" id="confirmar">
     <div class="arana-hilo" style="left:10%;--h:140px;--t:.6s"><svg><use href="#arana"/></svg></div>
-    <div class="personaje-flota revelar"><img src="img/personaje-3.png" alt="" onerror="this.parentNode.remove()"></div>
+    <div class="personaje-flota revelar"><img src="img/personaje-3.png" alt=""></div>
     <div class="panel revelar" style="--d:.1s">
       <svg class="tela-panel" data-web="corner" aria-hidden="true"></svg>
       <h2 class="titulo-sec">¿NOS ACOMPAÑAS? 🕷️</h2>
@@ -129,7 +182,7 @@
 
   <!-- 05 CIERRE -->
   <section class="sec cierre" id="cierre">
-    <div class="personaje-flota revelar"><img src="img/personaje-4.png" alt="" onerror="this.parentNode.remove()"></div>
+    <div class="personaje-flota revelar"><img src="img/personaje-4.png" alt=""></div>
     <h2 class="feliz mediano brilla revelar">
       <span class="l1 grad">¡FELIZ</span>
       <span class="l2 grad">CUMPLEAÑOS!</span>
