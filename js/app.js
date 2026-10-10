@@ -86,6 +86,23 @@ function partirLetras(el, claseExtra){
 $$('.feliz .grad').forEach(el=>{ el.classList.remove('grad'); partirLetras(el,'grad'); });
 $$('.letras').forEach(el=>partirLetras(el));
 
+/* ---------- FELIZ CUMPLEAÑOS: ajustar al ancho de la pantalla ---------- */
+function ajustarFeliz(){
+  $$('.feliz').forEach(h=>{
+    const ancho=(h.clientWidth||innerWidth-32)*0.94;
+    const max = h.classList.contains('mediano') ? 92 : 112;
+    ['.l1','.l2'].forEach(sel=>{
+      const l=h.querySelector(sel); if(!l) return;
+      l.style.fontSize='100px';
+      const w=l.scrollWidth||1;
+      l.style.fontSize=Math.min(max, Math.floor(100*ancho/w))+'px';
+    });
+  });
+}
+ajustarFeliz();
+if(document.fonts){ document.fonts.ready.then(ajustarFeliz); document.fonts.addEventListener && document.fonts.addEventListener('loadingdone',ajustarFeliz); }
+addEventListener('resize',()=>setTimeout(ajustarFeliz,160));
+
 /* ---------- Arañita que camina sobre los títulos ---------- */
 const BICHO = `<svg viewBox="0 0 40 34" aria-hidden="true"><g fill="none" stroke="#141726" stroke-width="2.2" stroke-linecap="round">
 <g class="pA"><path d="M20 14 Q15 5 9 4"/><path d="M25 13 Q29 4 33 2"/><path d="M23 20 Q22 30 18 33"/><path d="M26 20 Q33 26 38 26"/></g>

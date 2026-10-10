@@ -31,14 +31,16 @@ img{max-width:100%;display:block}
 .marca{font-family:'Bebas Neue',Impact,'Arial Narrow',sans-serif;letter-spacing:.35em;padding-left:.35em;font-size:clamp(1.15rem,5.4vw,1.9rem);color:#fff;text-shadow:0 0 18px rgba(255,255,255,.25)}
 .presenta{font-weight:600;letter-spacing:.6em;padding-left:.6em;font-size:clamp(.72rem,3vw,.92rem);color:var(--suave)}
 
-.feliz{font-family:'Bangers',Impact,'Arial Narrow',sans-serif;font-weight:400;line-height:.92;letter-spacing:.04em;display:flex;flex-direction:column;align-items:center}
-.feliz .l1{display:flex;align-items:center;gap:.22em;font-size:clamp(3rem,15vw,5.8rem)}
-.feliz .l2{font-size:clamp(2.8rem,14vw,6.6rem)}
-.feliz .grad{background:linear-gradient(180deg,#fff 0%,#ffe3e6 28%,#ff3346 58%,#a30b18 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-stroke:1px rgba(0,0,0,.25)}
+.feliz{font-family:'Luckiest Guy','Bangers',Impact,'Arial Black',sans-serif;font-weight:400;line-height:1.08;letter-spacing:.02em;width:100%;display:flex;flex-direction:column;align-items:center}
+.feliz .l1{display:flex;align-items:center;justify-content:center;gap:.15em;font-size:clamp(2.6rem,13vw,5.8rem);white-space:nowrap}
+.feliz .l2{font-size:clamp(2.4rem,11vw,6.6rem);white-space:nowrap}
+.feliz .grad{background:linear-gradient(180deg,#fff 0%,#ffe3e6 22%,#ff3346 55%,#a30b18 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-stroke:.035em #0a0b14;paint-order:stroke fill}
+/* margen interno para que el contorno y las letras inclinadas no se recorten */
+.feliz .letra.grad{padding:.14em .08em .1em;margin:-.14em -.08em -.1em;filter:drop-shadow(.055em .065em 0 #0a0b14)}
 .feliz .ara{font-size:.42em}
 .feliz .ara.grande{font-size:clamp(2rem,9vw,3rem);margin-top:6px}
-.feliz.mediano .l1{font-size:clamp(2.6rem,13vw,5rem)}
-.feliz.mediano .l2{font-size:clamp(2.4rem,12.5vw,5.6rem)}
+.feliz.mediano .l1{font-size:clamp(2.4rem,12vw,5rem)}
+.feliz.mediano .l2{font-size:clamp(2.2rem,10vw,5.6rem)}
 .brilla{animation:brillo 4s ease-in-out infinite}
 @keyframes brillo{
   0%,100%{filter:drop-shadow(0 0 10px rgba(255,40,60,.6)) drop-shadow(0 0 2px rgba(255,255,255,.35))}
@@ -122,8 +124,8 @@ img{max-width:100%;display:block}
 .tela-panel{position:absolute;top:0;right:0;width:46%;aspect-ratio:1;transform:scaleX(-1);opacity:.14;pointer-events:none}
 .tela-panel path{fill:none;stroke:#fff;stroke-width:.8}
 
-.titulo-sec{font-family:'Bangers',Impact,'Arial Narrow',sans-serif;font-weight:400;font-size:clamp(2.6rem,12vw,4.2rem);letter-spacing:.05em;line-height:1;text-shadow:3px 3px 0 var(--rojo),-2px -2px 0 rgba(30,91,255,.7)}
-.titulo-sec.chico{font-size:clamp(2.2rem,10.5vw,3.6rem)}
+.titulo-sec{font-family:'Luckiest Guy','Bangers',Impact,'Arial Black',sans-serif;font-weight:400;font-size:clamp(2rem,9.5vw,3.6rem);letter-spacing:.03em;line-height:1.15;color:#fff;-webkit-text-stroke:.03em #0a0b14;paint-order:stroke fill;text-shadow:.07em .07em 0 var(--rojo),.11em .11em 0 #0a0b14}
+.titulo-sec.chico{font-size:clamp(1.8rem,8.4vw,3rem)}
 
 .cuenta{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;width:100%}
 .caja{border-radius:14px;padding:14px 2px 10px;background:linear-gradient(180deg,var(--rojo),var(--rojo-osc));box-shadow:0 0 0 2px rgba(255,255,255,.12) inset,0 8px 20px rgba(225,29,46,.35)}
@@ -188,9 +190,9 @@ img{max-width:100%;display:block}
 .texto strong.rojo{color:var(--rojo2)}
 .panel .titulo-sec{margin-top:6px}
 .duo{display:flex;align-items:center;gap:12px}
-.chip{font-family:'Bangers',Impact,sans-serif;font-size:1.5rem;letter-spacing:.08em;padding:8px 18px 6px;border-radius:12px;background:linear-gradient(180deg,var(--rojo2),var(--rojo-osc));box-shadow:0 6px 18px rgba(225,29,46,.4);transform:rotate(-4deg);animation:chipR 2.4s ease-in-out infinite}
+.chip{font-family:'Luckiest Guy','Bangers',Impact,'Arial Black',sans-serif;font-size:1.25rem;letter-spacing:.08em;padding:8px 18px 6px;border-radius:12px;background:linear-gradient(180deg,var(--rojo2),var(--rojo-osc));box-shadow:0 6px 18px rgba(225,29,46,.4);transform:rotate(-4deg);animation:chipR 2.4s ease-in-out infinite}
 .chip.azul{background:linear-gradient(180deg,#2a63ff,var(--azul-osc));box-shadow:0 6px 18px rgba(30,91,255,.4);transform:rotate(4deg);animation-name:chipA}
-.vs{font-family:'Bangers',Impact,sans-serif;font-size:1.9rem;color:#ffd84a;text-shadow:2px 2px 0 #000;animation:latido 1.2s ease-in-out infinite}
+.vs{font-family:'Luckiest Guy','Bangers',Impact,'Arial Black',sans-serif;font-size:1.9rem;color:#ffd84a;text-shadow:2px 2px 0 #000;animation:latido 1.2s ease-in-out infinite}
 @keyframes chipR{0%,100%{transform:rotate(-4deg) translateY(0)}50%{transform:rotate(-7deg) translateY(-4px)}}
 @keyframes chipA{0%,100%{transform:rotate(4deg) translateY(0)}50%{transform:rotate(7deg) translateY(-4px)}}
 @keyframes latido{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
