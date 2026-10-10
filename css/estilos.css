@@ -50,7 +50,7 @@ img{max-width:100%;display:block}
 .lugar{font-weight:800;letter-spacing:.32em;padding-left:.32em;font-size:clamp(.8rem,3.6vw,1rem);color:var(--azul2);margin-top:4px;text-shadow:0 0 12px rgba(91,140,255,.5)}
 
 /* ---------- Botones ---------- */
-.btn{display:inline-block;white-space:nowrap;max-width:100%;font-family:'Bebas Neue',Impact,'Arial Narrow',sans-serif;font-size:clamp(1.15rem,5.6vw,1.45rem);letter-spacing:.12em;color:#fff;text-decoration:none;padding:16px 24px 13px;border:0;border-radius:999px;cursor:pointer;
+.btn{display:inline-block;white-space:nowrap;max-width:100%;font-family:'Bebas Neue',Impact,'Arial Narrow',sans-serif;font-size:clamp(1.05rem,5vw,1.45rem);letter-spacing:.1em;color:#fff;text-decoration:none;padding:16px 24px 13px;border:0;border-radius:999px;cursor:pointer;
   background:linear-gradient(135deg,var(--rojo2) 0%,var(--rojo) 45%,#9e0d1a 100%);
   box-shadow:0 0 0 2px rgba(255,255,255,.16) inset,0 10px 30px rgba(225,29,46,.45);transition:transform .2s}
 .btn:active{transform:scale(.96)}
@@ -103,7 +103,9 @@ img{max-width:100%;display:block}
 /* ---------- INVITACIÓN ---------- */
 #invitacion{position:relative;z-index:4;opacity:0;visibility:hidden}
 #invitacion.activa{opacity:1;visibility:visible;transition:opacity 1s ease}
-.sec{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:90px 16px;position:relative;max-width:560px;margin:0 auto;gap:6px}
+.sec{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:36px 16px;position:relative;max-width:560px;margin:0 auto;gap:18px}
+.sec.portada{min-height:100vh;min-height:100svh;gap:6px;padding:40px 16px 80px}
+.sec.cierre{padding-bottom:110px;gap:8px}
 .portada .presenta{margin:8px 0 14px}
 
 .revelar{opacity:0;transform:translateY(40px) scale(.97);transition:opacity .9s ease var(--d,0s),transform 1s cubic-bezier(.16,1,.3,1) var(--d,0s)}
@@ -139,12 +141,11 @@ img{max-width:100%;display:block}
 
 /* Imágenes opcionales (img/personaje-1..4.png) */
 .colgante{display:flex;flex-direction:column;align-items:center;margin-bottom:6px}
-.colgante img{width:min(44vw,190px);height:auto;filter:drop-shadow(0 12px 22px rgba(0,0,0,.6));transform-origin:top center;animation:balanceo 3.6s ease-in-out infinite}
-.colgante::before{content:"";width:2px;height:56px;background:linear-gradient(rgba(232,236,255,0),#e8ecff)}
-.colgante.chico{margin-top:22px}
-.colgante.chico img{width:min(34vw,140px)}
+.colgante img{width:min(72vw,320px);height:auto;filter:drop-shadow(0 12px 22px rgba(0,0,0,.6));transform-origin:top center;animation:balanceo 3.6s ease-in-out infinite}
+.colgante::before{content:"";width:2px;height:40px;background:linear-gradient(rgba(232,236,255,0),#e8ecff)}
+
 @keyframes balanceo{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
-.personaje-flota img{width:min(46vw,200px);height:auto;filter:drop-shadow(0 12px 22px rgba(0,0,0,.6));animation:flotar 3.2s ease-in-out infinite;margin-bottom:10px}
+.personaje-flota img{width:min(76vw,340px);height:auto;filter:drop-shadow(0 12px 22px rgba(0,0,0,.6));animation:flotar 3.2s ease-in-out infinite;margin-bottom:10px}
 @keyframes flotar{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 
 /* Arañas colgando */
@@ -172,11 +173,55 @@ img{max-width:100%;display:block}
 }
 
 /* Mascota original */
-.mascota{width:min(44vw,190px);height:auto;aspect-ratio:200/220;display:block;filter:drop-shadow(0 12px 22px rgba(0,0,0,.6)) drop-shadow(0 0 1.5px rgba(255,255,255,.55))}
+.mascota{width:min(56vw,240px);height:auto;aspect-ratio:200/220;display:block;filter:drop-shadow(0 12px 22px rgba(0,0,0,.6)) drop-shadow(0 0 1.5px rgba(255,255,255,.55))}
 .colgante .mascota{transform-origin:top center;animation:balanceo 3.6s ease-in-out infinite}
-.colgante.chico .mascota{width:min(32vw,135px)}
 .personaje-flota{display:flex;align-items:flex-end;justify-content:center}
 .personaje-flota .mascota{animation:flotar 3.2s ease-in-out infinite;margin-bottom:10px}
-.cierre .personaje-flota .mascota{width:min(40vw,170px)}
+.cierre .personaje-flota .mascota{width:min(46vw,200px)}
 .globos{width:min(22vw,92px);aspect-ratio:120/220;margin:0 -10px 40px 0;animation:flotar 4s .5s ease-in-out infinite;filter:drop-shadow(0 10px 16px rgba(0,0,0,.5))}
 .globos.izq{margin:0 0 40px -10px;animation-delay:1.2s;transform:scaleX(-1)}
+
+/* Textos nuevos */
+.kicker{font-weight:800;font-size:.72rem;letter-spacing:.32em;padding-left:.32em;color:var(--azul2);margin-bottom:-8px}
+.texto{font-size:clamp(.98rem,4.2vw,1.12rem);line-height:1.6;color:#dfe4ff;max-width:34ch}
+.texto strong{color:#fff}
+.texto strong.rojo{color:var(--rojo2)}
+.panel .titulo-sec{margin-top:6px}
+.duo{display:flex;align-items:center;gap:12px}
+.chip{font-family:'Bangers',Impact,sans-serif;font-size:1.5rem;letter-spacing:.08em;padding:8px 18px 6px;border-radius:12px;background:linear-gradient(180deg,var(--rojo2),var(--rojo-osc));box-shadow:0 6px 18px rgba(225,29,46,.4);transform:rotate(-4deg);animation:chipR 2.4s ease-in-out infinite}
+.chip.azul{background:linear-gradient(180deg,#2a63ff,var(--azul-osc));box-shadow:0 6px 18px rgba(30,91,255,.4);transform:rotate(4deg);animation-name:chipA}
+.vs{font-family:'Bangers',Impact,sans-serif;font-size:1.9rem;color:#ffd84a;text-shadow:2px 2px 0 #000;animation:latido 1.2s ease-in-out infinite}
+@keyframes chipR{0%,100%{transform:rotate(-4deg) translateY(0)}50%{transform:rotate(-7deg) translateY(-4px)}}
+@keyframes chipA{0%,100%{transform:rotate(4deg) translateY(0)}50%{transform:rotate(7deg) translateY(-4px)}}
+@keyframes latido{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
+
+/* Letras que bajan colgando de un hilo y luego ondulan */
+.palabra{display:inline-block;white-space:nowrap}
+.letra{display:inline-block;transform-origin:50% -60%}
+.revelar.visible .letra,.paso-3 .letra{animation:colgar .9s cubic-bezier(.3,1.5,.5,1) calc(var(--i)*55ms + .15s) both,ondear 2.8s ease-in-out calc(1.4s + var(--i)*110ms) infinite}
+@keyframes colgar{0%{opacity:0;transform:translateY(-1.3em) rotate(-18deg)}55%{opacity:1;transform:translateY(.1em) rotate(8deg)}80%{transform:translateY(-.04em) rotate(-3deg)}100%{opacity:1;transform:none}}
+@keyframes ondear{0%,100%{transform:translateY(0) rotate(0)}25%{transform:translateY(-.07em) rotate(-2deg)}75%{transform:translateY(.03em) rotate(2deg)}}
+
+/* Arañita caminando sobre los títulos */
+.con-arana{position:relative}
+.camina{position:absolute;left:0;right:0;top:-20px;height:24px;pointer-events:none;z-index:2}
+.bicho{position:absolute;top:0;left:0;width:30px;height:26px;animation:caminar var(--dur,10s) linear var(--del,0s) infinite;filter:drop-shadow(0 0 2px rgba(255,255,255,.85)) drop-shadow(0 0 6px rgba(255,59,74,.4))}
+.bicho svg{width:100%;height:100%;display:block;overflow:visible}
+.bicho .pA{transform-origin:23px 17px;animation:patasA .22s ease-in-out infinite alternate}
+.bicho .pB{transform-origin:23px 17px;animation:patasA .22s ease-in-out infinite alternate-reverse}
+.bicho .cuerpo{animation:bob .22s ease-in-out infinite alternate}
+@keyframes patasA{from{transform:rotate(-9deg)}to{transform:rotate(9deg)}}
+@keyframes bob{from{transform:translateY(-.6px)}to{transform:translateY(.6px)}}
+@keyframes caminar{
+  0%{left:0;transform:scaleX(1)}
+  20%{left:calc(40% - 12px);transform:scaleX(1)}
+  26%{left:calc(40% - 12px);transform:scaleX(1)}
+  47%{left:calc(100% - 30px);transform:scaleX(1)}
+  50%{left:calc(100% - 30px);transform:scaleX(-1)}
+  72%{left:calc(55% - 15px);transform:scaleX(-1)}
+  77%{left:calc(55% - 15px);transform:scaleX(-1)}
+  97%{left:0;transform:scaleX(-1)}
+  100%{left:0;transform:scaleX(1)}
+}
+.feliz .l2.con-arana .camina{top:-14px}
+@media (prefers-reduced-motion:reduce){.camina{display:none}}

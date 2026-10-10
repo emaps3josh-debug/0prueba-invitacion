@@ -108,7 +108,7 @@
     <svg class="tela-titulo" data-web="full" aria-hidden="true"></svg>
     <h1 class="feliz">
       <span class="l1"><span class="ara">🕷️</span><span class="grad">FELIZ</span><span class="ara">🕷️</span></span>
-      <span class="l2 grad">CUMPLEAÑOS</span>
+      <span class="l2 grad con-arana">CUMPLEAÑOS</span>
     </h1>
     <p class="fecha">24 OCTUBRE 2026</p>
     <p class="lugar">TEMIXCO, MORELOS</p>
@@ -132,22 +132,41 @@
     <p class="presenta revelar" style="--d:.15s">PRESENTA</p>
     <h2 class="feliz brilla revelar" style="--d:.3s">
       <span class="l1"><span class="ara">🕷️</span><span class="grad">FELIZ</span><span class="ara">🕷️</span></span>
-      <span class="l2 grad">CUMPLEAÑOS</span>
+      <span class="l2 grad con-arana">CUMPLEAÑOS</span>
     </h2>
     <p class="fecha revelar" style="--d:.45s">24 OCTUBRE 2026</p>
     <p class="lugar revelar" style="--d:.55s">TEMIXCO, MORELOS</p>
-    <a class="bajar" href="#cuenta" aria-label="Ver más">
+    <a class="bajar" href="#mensaje" aria-label="Ver más">
       <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
   </section>
 
-  <!-- 02 CUENTA REGRESIVA -->
-  <section class="sec" id="cuenta">
-    <div class="arana-hilo" style="left:6%;--h:110px;--t:0s"><svg><use href="#arana"/></svg></div>
-    <div class="arana-hilo" style="right:8%;--h:170px;--t:1.3s"><svg><use href="#arana"/></svg></div>
+  <!-- 02 MENSAJE + VESTIMENTA -->
+  <section class="sec" id="mensaje">
+    <div class="arana-hilo" style="right:6%;--h:90px;--t:.4s"><svg><use href="#arana"/></svg></div>
     <div class="panel revelar">
       <svg class="tela-panel" data-web="corner" aria-hidden="true"></svg>
-      <h2 class="titulo-sec" id="faltan">FALTAN...</h2>
+      <p class="kicker">UNA MISIÓN ESPECIAL 🕸️</p>
+      <h2 class="titulo-sec letras con-arana">¡TE ESPERAMOS!</h2>
+      <p class="texto">Un año más de aventuras, risas y superpoderes… <strong>¡y quiero celebrarlo contigo!</strong></p>
+      <p class="texto">Te esperamos el <strong class="rojo">sábado 24 de octubre</strong> para festejar mi cumpleaños. Tu presencia es el mejor regalo que puedo recibir, así que <strong>¡no faltes!</strong></p>
+    </div>
+    <div class="panel revelar disfraz" style="--d:.1s">
+      <svg class="tela-panel" data-web="corner" aria-hidden="true"></svg>
+      <p class="kicker">CÓDIGO DE VESTIMENTA</p>
+      <h2 class="titulo-sec chico letras con-arana">¿HÉROE O VILLANO?</h2>
+      <div class="duo"><span class="chip">HÉROE</span><span class="vs">VS</span><span class="chip azul">VILLANO</span></div>
+      <p class="texto">¡Tú eliges de qué lado estás! Ven disfrazado de tu superhéroe o villano favorito y prepárate para <strong>salvar… o conquistar</strong> la fiesta.</p>
+    </div>
+  </section>
+
+  <!-- 03 CUENTA REGRESIVA -->
+  <section class="sec" id="cuenta">
+    <div class="arana-hilo" style="left:6%;--h:70px;--t:0s"><svg><use href="#arana"/></svg></div>
+    <div class="panel revelar">
+      <svg class="tela-panel" data-web="corner" aria-hidden="true"></svg>
+      <p class="kicker">LA AVENTURA COMIENZA EN</p>
+      <h2 class="titulo-sec letras con-arana" id="faltan">FALTAN...</h2>
       <div class="cuenta">
         <div class="caja"><span class="num" id="cd-d">00</span><span class="lab">DÍAS</span></div>
         <div class="caja"><span class="num" id="cd-h">00</span><span class="lab">HORAS</span></div>
@@ -155,41 +174,43 @@
         <div class="caja"><span class="num" id="cd-s">00</span><span class="lab">SEG</span></div>
       </div>
     </div>
-    <div class="colgante chico revelar" style="--d:.2s"><img src="img/personaje-2.png" alt=""></div>
+    <div class="colgante revelar" style="--d:.2s"><img src="img/personaje-2.png" alt=""></div>
   </section>
 
-  <!-- 03 UBICACIÓN -->
+  <!-- 04 UBICACIÓN -->
   <section class="sec" id="ubicacion">
     <div class="panel revelar">
       <svg class="tela-panel" data-web="corner" aria-hidden="true"></svg>
       <div class="pin" aria-hidden="true">📍</div>
-      <h2 class="titulo-sec chico">TEMIXCO, MORELOS</h2>
+      <p class="kicker">EL PUNTO DE ENCUENTRO DE LOS HÉROES</p>
+      <h2 class="titulo-sec chico letras con-arana">TEMIXCO, MORELOS</h2>
       <a id="lnkMapa" class="btn azul" href="#" target="_blank" rel="noopener">VER UBICACIÓN 📍</a>
     </div>
   </section>
 
-  <!-- 04 CONFIRMACIÓN -->
+  <!-- 05 CONFIRMACIÓN -->
   <section class="sec" id="confirmar">
-    <div class="arana-hilo" style="left:10%;--h:140px;--t:.6s"><svg><use href="#arana"/></svg></div>
     <div class="personaje-flota revelar"><img src="img/personaje-3.png" alt=""></div>
     <div class="panel revelar" style="--d:.1s">
       <svg class="tela-panel" data-web="corner" aria-hidden="true"></svg>
-      <h2 class="titulo-sec">¿NOS ACOMPAÑAS? 🕷️</h2>
+      <h2 class="titulo-sec"><span class="letras con-arana">¿NOS ACOMPAÑAS?</span> 🕷️</h2>
+      <p class="texto">Tu lugar en esta aventura ya está apartado. <strong>¡Confírmanos por WhatsApp!</strong></p>
       <a id="lnkWhats" class="btn" href="#" target="_blank" rel="noopener">CONFIRMAR ASISTENCIA</a>
       <a class="tel" href="tel:+527776242702">777 624 2702</a>
     </div>
   </section>
 
-  <!-- 05 CIERRE -->
+  <!-- 06 CIERRE -->
   <section class="sec cierre" id="cierre">
     <div class="personaje-flota revelar"><img src="img/personaje-4.png" alt=""></div>
     <h2 class="feliz mediano brilla revelar">
       <span class="l1 grad">¡FELIZ</span>
-      <span class="l2 grad">CUMPLEAÑOS!</span>
+      <span class="l2 grad con-arana">CUMPLEAÑOS!</span>
       <span class="ara grande">🕷️</span>
     </h2>
     <p class="frase revelar" style="--d:.2s">¡Prepárate para la aventura!</p>
-    <p class="firma revelar" style="--d:.35s">Mendoza Invitaciones</p>
+    <p class="texto revelar" style="--d:.3s">Gracias por ser parte de mi historia.<br>¡Nos vemos en la fiesta!</p>
+    <p class="firma revelar" style="--d:.4s">Mendoza Invitaciones</p>
   </section>
 </main>
 

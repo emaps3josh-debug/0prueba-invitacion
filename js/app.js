@@ -64,6 +64,41 @@ $$('.colgante img, .personaje-flota img').forEach(img=>{
   if(img.complete && !img.naturalWidth) siguiente();
 });
 
+/* ---------- Letras animadas ---------- */
+const seg = window.Intl && Intl.Segmenter ? new Intl.Segmenter('es',{granularity:'grapheme'}) : null;
+const grafemas = t => seg ? Array.from(seg.segment(t),x=>x.segment) : Array.from(t);
+function partirLetras(el, claseExtra){
+  let i=0;
+  const nodos=[]; const w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT); while(w.nextNode()) nodos.push(w.currentNode);
+  nodos.forEach(n=>{
+    const frag=document.createDocumentFragment();
+    n.textContent.split(/(\s+)/).forEach(parte=>{
+      if(!parte) return;
+      if(/^\s+$/.test(parte)){ frag.appendChild(document.createTextNode(' ')); return; }
+      const pal=document.createElement('span'); pal.className='palabra';
+      grafemas(parte).forEach(g=>{ const l=document.createElement('span'); l.className='letra'+(claseExtra?' '+claseExtra:''); l.style.setProperty('--i',i++); l.textContent=g; pal.appendChild(l); });
+      frag.appendChild(pal);
+    });
+    n.replaceWith(frag);
+  });
+  if(!el.getAttribute('aria-label')) el.setAttribute('aria-label',el.textContent);
+}
+$$('.feliz .grad').forEach(el=>{ el.classList.remove('grad'); partirLetras(el,'grad'); });
+$$('.letras').forEach(el=>partirLetras(el));
+
+/* ---------- Arañita que camina sobre los títulos ---------- */
+const BICHO = `<svg viewBox="0 0 40 34" aria-hidden="true"><g fill="none" stroke="#141726" stroke-width="2.2" stroke-linecap="round">
+<g class="pA"><path d="M20 14 Q15 5 9 4"/><path d="M25 13 Q29 4 33 2"/><path d="M23 20 Q22 30 18 33"/><path d="M26 20 Q33 26 38 26"/></g>
+<g class="pB"><path d="M23 14 Q22 4 18 1"/><path d="M26 14 Q33 8 38 8"/><path d="M20 20 Q15 29 9 30"/><path d="M25 21 Q29 30 33 32"/></g></g>
+<g class="cuerpo"><ellipse cx="16" cy="17" rx="9" ry="7" fill="#141726"/><circle cx="28" cy="17" r="5.2" fill="#141726"/>
+<path d="M14 15 L18 15 L16 17.5 Z M14 19 L18 19 L16 16.5 Z" fill="#e11d2e"/><circle cx="30.5" cy="15.4" r="1.4" fill="#fff"/><circle cx="30.5" cy="18.6" r="1.4" fill="#fff"/></g></svg>`;
+$$('.con-arana').forEach(el=>{
+  const c=document.createElement('span'); c.className='camina'; c.setAttribute('aria-hidden','true');
+  const b=document.createElement('span'); b.className='bicho'; b.innerHTML=BICHO;
+  b.style.setProperty('--dur',(8+Math.random()*5).toFixed(1)+'s'); b.style.setProperty('--del',(-Math.random()*8).toFixed(1)+'s');
+  c.appendChild(b); el.appendChild(c);
+});
+
 /* ---------- Ciudad nocturna ---------- */
 const ciudad = $('#ciudad'), cc = ciudad.getContext('2d');
 function rng(seed){ return () => ((seed = (seed*16807) % 2147483647) - 1) / 2147483646; }
